@@ -10,14 +10,21 @@
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      googleCalendarApiKey: 'AIzaSyAEyJ7VjBUqJKFSZT6LRwuCm_ZXi7ZLcYY',
+      headerToolbar: {
+        left: 'dayGridMonth,timeGridWeek,timeGridDay',
+        center: 'title',
+        right: 'prevYear,prev,next,nextYear'
+      },
       eventSources: [
         {
-          googleCalendarId: 'c_0uj9et9egb561vibsf67n2e7es@group.calendar.google.com'
+          googleCalendarId: 'c_0uj9et9egb561vibsf67n2e7es@group.calendar.google.com',
+          color: 'green',
+          editable: true
         },
 
         {
-          googleCalendarId: 'c_2cft6bjf7o64jls56lf4c52j40@group.calendar.google.com'
+          googleCalendarId: 'c_2cft6bjf7o64jls56lf4c52j40@group.calendar.google.com',
+          color: 'blue'
         },
         {
           googleCalendarId: 'c_92p3eg33id7l8hhfabmcvat6p0@group.calendar.google.com'
